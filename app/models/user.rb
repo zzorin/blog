@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   private
 
     def create_remember_token
-      self.remember_token = User.digist(User.new_remember_token)
+      self.remember_token = User.encrypt(User.new_remember_token)
     end
 
     
